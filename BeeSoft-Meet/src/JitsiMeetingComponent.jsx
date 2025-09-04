@@ -10,7 +10,7 @@ function JitsiMeetingComponent() {
         // domain="beesoft.com.ng"
         userInfo={{ displayName: "BeeSoft" }}
         configOverwrite={{
-          startWithAudioMuted: true,
+          startWithAudioMuted: false,
           startWithVideoMuted: false,
           disableModeratorIndicator: true,
           brandingDataUrl:
