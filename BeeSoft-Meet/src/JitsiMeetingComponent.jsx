@@ -7,11 +7,14 @@ function JitsiMeetingComponent() {
       <JitsiMeeting
         roomName="BeeSoftRoom"
         domain="meet.jit.si"
+        // domain="beesoft.com.ng"
         userInfo={{ displayName: "BeeSoft" }}
         configOverwrite={{
           startWithAudioMuted: true,
           startWithVideoMuted: false,
           disableModeratorIndicator: true,
+          brandingDataUrl:
+            "BeeSoft-Meet/public/beesoft_logo-removebg-preview.png",
         }}
         interfaceConfigOverwrite={{
           DISABLE_JOIN_LEAVE_NOTIFICATIONS: true,
@@ -24,15 +27,16 @@ function JitsiMeetingComponent() {
             "fullscreen",
             "hangup",
           ],
-          BRAND_WATERMARK_LINK: "https://your-website.com",
+          BRAND_WATERMARK_LINK: "https://beesoft.com.ng/",
           SHOW_JITSI_WATERMARK: false,
           SHOW_WATERMARK_FOR_GUESTS: false,
         }}
-        configOverwrited={{
-          ...{
-            brandingDataUrl: "https://your-cdn.com/custom-logo.json",
-          },
-        }}
+        // configOverwrited={{
+        //   ...{
+        //     brandingDataUrl:
+        //       "BeeSoft-Meet/public/beesoft_logo-removebg-preview.png",
+        //   },
+        // }}
         getIFrameRef={(iframeRef) => {
           iframeRef.style.height = "100%";
           iframeRef.style.width = "100%";
